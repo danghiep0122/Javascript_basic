@@ -134,24 +134,56 @@
 // var abf = 100/'a1012'
 // console.log(!isNaN(abf));
 
-const pig = {
-    ten: 'Jimmy the 🐷',
-    legs: 4,
-    shell: false,
-    meal: 5,
-    diet: 'vegetable',
-}
+// const pig = {
+//     ten: 'Jimmy the 🐷',
+//     legs: 4,
+//     shell: false,
+//     meal: 5,
+//     diet: 'vegetable',
+// }
 
 // function feed(animal) {
 //     return `Feed ${animal.ten} ${animal.meal} kilos of ${animal.diet}`;
 // }
 // console.log(feed(pig));
 
-function feed({ten,legs, meal, diet}) {
-    return `Feed ${ten} with ${legs} legs, ${meal} kilos of ${diet}`;
-}
-console.log(feed(pig));
+// function feed({ten,legs, meal, diet}) {
+//     return `Feed ${ten} with ${legs} legs, ${meal} kilos of ${diet}`;
+// }
+// console.log(feed(pig));
 
-function feed({ten,legs, meal, diet}) {
-    return `Feed ${ten} with ${legs} legs, ${meal} kilos of ${diet}`;
+// function feed({ten,legs, meal, diet}) {
+//     return `Feed ${ten} with ${legs} legs, ${meal} kilos of ${diet}`;
+// }
+
+// const myInfo = {
+//     name: 'Tommy the 🐶',
+//     age: 7,
+//     address: 'HCM City 🏰',
+//     male: true,
+//     getName: function () {
+//         return this.name;
+//     }
+// }
+// var myKey = 'address';
+// console.log(myInfo.getName());
+
+function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
+
+    this.getName = function () {
+        return `${firstName} ${lastName}`; 
+    }
 }
+
+var author = new User('Jimmy', 'the', '🐷');
+var user = new User('Tommy', 'the', '🐶');
+
+author.age = 18;
+console.log(author);
+console.log(user);
+
+console.log(author.getName());
+console.log(user.getName());
