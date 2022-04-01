@@ -37,12 +37,7 @@
 //     address1: 'Viet Nam',
 // }
 
-// var myArray = [
-//     'Beer',
-//     'Club',
-//     'Karaoke',
-//     'Car',
-// ]
+
 
 // console.log (!!10);
 // if (a > 9 || b > 0) {
@@ -168,22 +163,154 @@
 // var myKey = 'address';
 // console.log(myInfo.getName());
 
-function User(firstName, lastName, avatar) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.avatar = avatar;
+// function User(firstName, lastName, avatar) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.avatar = avatar;
 
-    this.getName = function () {
-        return `${firstName} ${lastName}`; 
+//     this.getName = function () {
+//         return `${firstName} ${lastName}`; 
+//     }
+// }
+
+// var author = new User('Jimmy', 'the', '🐷');
+// var user = new User('Tommy', 'the', '🐶');
+
+// author.age = 18;
+// console.log(author);
+// console.log(user);
+
+// console.log(author.getName());
+// console.log(user.getName());
+
+// let i = 15000;
+// do {
+//     i += 150 ;
+//     console.log(i);
+// } while (i < 30000);
+
+let gameLibrary = [
+    {
+    game: 'Pes',
+    type: '⚽',
+    time: 2022,
+    price: 50,
+    shit: true,
+    },
+    {
+    game: 'GOW',
+    type: '⚔',
+    time: 2092,
+    price: 10,
+    shit: false,
+    },
+    {
+    game: 'Fifa',
+    type: '⚽',
+    time: 2022,
+    price: 50,
+    shit: false,
+    },
+    {
+    game: 'Elden Ring',
+    type: '🪓',
+    time: 2022,
+    price: 90,
+    shit: false,
+    },
+    {
+    game: 'NFS',
+    type: '🚗',
+    time: 2012,
+    price: 30,
+    shit: true,
     }
-}
+]
 
-var author = new User('Jimmy', 'the', '🐷');
-var user = new User('Tommy', 'the', '🐶');
+let newLibrary = gameLibrary.map(function(gameLib) {
+    return {
+        game: gameLib.game,
+        time: `Year ${gameLib.time}`,
+        type: gameLib.type,
+    }
+})
+console.log(newLibrary)
 
-author.age = 18;
-console.log(author);
-console.log(user);
+let totalPrice = gameLibrary.reduce((a, b) => a + b.price, 0);
+console.log(totalPrice)
 
-console.log(author.getName());
-console.log(user.getName());
+
+
+// Array.prototype.map2 = function(callback) {
+//     let output = []
+//     let arrLength = this.length;
+//     for (i = 0; i < arrLength; ++i) {
+//         let result = callback(this[i]);
+//         output.push(result)
+//     }
+//     return output;
+// }
+
+// let newLibrary = gameLibrary.map2(function(newLib) 
+//     {return {
+//     game: newLib.game,
+//     price: newLib.price,
+//     }
+// })
+// console.log(newLibrary);
+
+
+// const myArray = [
+//     'Beer',
+//     'Club',
+//     'Karaoke',
+//     'Car',
+// ]
+
+// let htmls = myArray.map((a) => `<h2 ${a} h2>`)
+// console.log(htmls.join(''));
+
+// Array.prototype.map2 = function(callback) {
+//     let output = [];
+//     let arrayLength = this.length;
+//     for (i = 0; i < arrayLength; ++i) {
+//     var result = callback(this[i]);
+//     output.push(result)
+//     }
+//     return output;
+// }
+
+// var htmls = myArray.map2((a) => `<h2>${a}</h2>`)
+// console.log(htmls.join(''))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function myFunction(param) {
+//     if (typeof param === 'function') {
+//         param('🐕🐈🐃🐁🐖');
+//     }else {
+//         alert('Hay nhap ham chinh xac')
+//     }}
+
+// function myCallback (value) {
+//     console.log('Gia tri la : ', value)
+// }
+
+// myFunction (myCallback)
