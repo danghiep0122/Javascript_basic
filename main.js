@@ -229,23 +229,23 @@ let gameLibrary = [
 
 ///Xay dung every2/////////////////////////////////////////////////////////////////////
 
-Array.prototype.every2 = function(callback) {
-    var output = true
-    for (var index in this) {
-        if (this.hasOwnProperty(index)) {
-            var result = callback(this[index], index, this)
-            if (!result) {
-                output = false;
-                break
-            }
-        } 
-    }return output
-}
+// Array.prototype.every2 = function(callback) {
+//     var output = true
+//     for (var index in this) {
+//         if (this.hasOwnProperty(index)) {
+//             var result = callback(this[index], index, this)
+//             if (!result) {
+//                 output = false;
+//                 break
+//             }
+//         } 
+//     }return output
+// }
 
-let result = gameLibrary.every2(function(a) {
-    return a.shit === true;
-})
-console.log(result)
+// let result = gameLibrary.every2(function(a) {
+//     return a.shit === true;
+// })
+// console.log(result)
 
 //Xay dung some 2 //////////////////////////////////////////////////////////////////////
 
