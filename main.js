@@ -202,21 +202,21 @@ let gameLibrary = [
     type: '⚔',
     time: 2092,
     price: 10,
-    shit: false,
+    shit: true,
     },
     {
     game: 'Fifa',
     type: '⚽',
     time: 2022,
     price: 50,
-    shit: false,
+    shit: true,
     },
     {
     game: 'Elden Ring',
     type: '🪓',
     time: 2022,
     price: 90,
-    shit: false,
+    shit: true,
     },
     {
     game: 'NFS',
@@ -227,17 +227,79 @@ let gameLibrary = [
     }
 ]
 
-let newLibrary = gameLibrary.map(function(gameLib) {
-    return {
-        game: gameLib.game,
-        time: `Year ${gameLib.time}`,
-        type: gameLib.type,
-    }
-})
-console.log(newLibrary)
+///Xay dung every2/////////////////////////////////////////////////////////////////////
 
-let totalPrice = gameLibrary.reduce((a, b) => a + b.price, 0);
-console.log(totalPrice)
+Array.prototype.every2 = function(callback) {
+    var output = true
+    for (var index in this) {
+        if (this.hasOwnProperty(index)) {
+            var result = callback(this[index], index, this)
+            if (!result) {
+                output = false;
+                break
+            }
+        } 
+    }return output
+}
+
+let result = gameLibrary.every2(function(a) {
+    return a.shit === true;
+})
+console.log(result)
+
+//Xay dung some 2 //////////////////////////////////////////////////////////////////////
+
+// Array.prototype.some2 = function(callback) {
+//     var output = false;
+//     for (let index in this) {
+//         if (this.hasOwnProperty(index)) {
+//             if (callback(this[index], index, this)) {
+//                 return true;
+//             }
+//         }
+//     }
+//     return output;
+// }
+
+// let result = gameLibrary.some2(function(game, index, array) {
+//     return game.shit;
+// });
+// console.log(result)
+
+
+
+
+// xay dung filter 2 /////////////////////////////////////////////////////////////////
+// Array.prototype.filter2 = function (callback) {
+//     let output = []
+//     for (var index in this) {
+//         if (this.hasOwnProperty(index)) {
+//             var result = callback (this[index], index, this)
+//             if (result) {
+//                 output.push(this[index]);
+//             }
+//         }
+//     }
+//     return output
+// }
+
+// let filterPrice = gameLibrary.filter2(function(a) {
+//     return a.price > 40;
+// })
+// console.log(filterPrice)
+
+// Xay dung map2///////////////////////////////////////////////////////////////////
+// let newLibrary = gameLibrary.map(function(gameLib) {
+//     return {
+//         game: gameLib.game,
+//         time: `Year ${gameLib.time}`,
+//         type: gameLib.type,
+//     }
+// })
+// console.log(newLibrary)
+
+// let totalPrice = gameLibrary.reduce((a, b) => a + b.price, 0);
+// console.log(totalPrice)
 
 
 
@@ -260,12 +322,31 @@ console.log(totalPrice)
 // console.log(newLibrary);
 
 
-// const myArray = [
-//     'Beer',
-//     'Club',
-//     'Karaoke',
-//     'Car',
-// ]
+const myArray = [
+    'Beer',
+    'Club',
+    'Karaoke',
+    'Car',
+]
+
+//forEach();
+
+// Array.prototype.forEach2 = function (callback) {
+//     for (var index in this) {
+//         if (this.hasOwnProperty(index)) {
+//             callback (this[index], index, this)
+//         }
+//     }
+// }
+
+// myArray.forEach2(function(a, b, c) {
+//     console.log(a, b ,c);
+// })
+
+// myArray.length = 5
+// for (let index in myArray) {
+//     console.log(myArray[index]);
+// }
 
 // let htmls = myArray.map((a) => `<h2 ${a} h2>`)
 // console.log(htmls.join(''));
