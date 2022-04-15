@@ -16,5 +16,5 @@ let textNote2 = document.getElementsByTagName('div')[0].lastChild
 console.log(textNote1)
 console.log(textNote2)
 console.log(h1Element)
-console.log(textNotex)
+// console.log(textNote)
 
