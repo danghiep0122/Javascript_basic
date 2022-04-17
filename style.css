@@ -5,7 +5,7 @@
 }
 
 .big-container {
-    background-color: antiquewhite;
+    background-color: #faebd7;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -30,8 +30,7 @@
     height: 50px;
     display: block;
     font-size: 1.7rem;
-    background-color: yellow;
-    background-color: rgb(54, 121, 184);
+    background-color: #faebd7;
     opacity: 70%;
     text-align: center;
     line-height: 50px;
@@ -42,8 +41,17 @@
 .tab-item:hover {
     background-color: pink;
     cursor: pointer;
-    border-top-left-radius: 5px ;
-    border-top-right-radius: 5px ;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
+    opacity: 50%;
+
+}
+
+.tab-item.active {
+    background-color: #faebd7;
+    cursor: pointer;
+    border-top-left-radius: 15px ;
+    border-top-right-radius: 15px ;
     opacity: 100%;
 }
 
@@ -59,4 +67,28 @@
 
 .line:hover {
     width: 300px;
+}
+
+.pane-container {
+    margin-top: 20px;
+}
+
+.pane-item h2 {
+    font-size: 1.8rem;
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1.8px;
+}
+
+.pane-item p {
+    font-size: 1.3rem;
+    padding: 5px 10px;
+}
+
+.pane-item {
+    display: none;
+}
+
+.pane-item.active {
+    display: block;
 }
