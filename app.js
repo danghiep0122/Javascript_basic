@@ -13,3 +13,15 @@
 // }
 
 // console.log(obj)
+
+const $=document.querySelector.bind(document);
+const $$ = document.querySelectorAll.bind(document);
+
+const tabs = $$('.tab-item')
+const panes = $$('.pane-item')
+
+tabs.forEach((tab, index) => {
+    tab.onclick = function () {
+        this.classList.add('active');
+    }
+});
